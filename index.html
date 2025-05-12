@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="playlist.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <hr id="bar">
+    <main>
+        <div id="song-container">
+            <img id="cover" src="" alt="Cover">
+            <div>
+                <h1 id="title"></h1>
+                <h2 id="artist"></h2>
+            </div>
+        </div>
+        <div id="controls-container">
+            <button id="back"><img src="assets/back.svg" alt="BACK"></button>
+            <button id="play"><img src="assets/pause.svg" alt="PAUSE"></button>
+            <button id="forward"><img src="assets/forward.svg" alt="SKIP"></button>
+        </div>
+    </main>
+    <video autoplay disablePictureInPicture loop>
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

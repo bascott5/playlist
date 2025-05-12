@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+#bar {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 0.25vw;
+    background-color: white;
+    z-index: 2;
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0) 100%);;
+    z-index: 1;
+}
+
+#song-container {
+    margin: 2vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    width: 75%;
+}
+
+#song-container > img {
+    all: unset;
+    object-fit: cover;
+    width: 20%;
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    margin-right: 3vh;
+    min-width: 300px;
+}
+
+#song-container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#song-container > div > h1 {
+    all: unset;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+#song-container > div > h2 {
+    all: unset;
+    font-weight: bold;
+    color: lightgrey;
+    font-size: 1.75em;
+}
+
+#controls-container {
+    margin: 2vh;
+    display: flex;
+    width: 25%;
+    justify-content: end;
+    align-items: end;
+}
+
+#controls-container > button {
+    all: unset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    min-width: 75px;
+    margin-left: 2vh;
+    padding: 3vh;
+    transition: 0.3s;
+}
+
+#controls-container > button:hover {
+    background-color: whitesmoke;
+}
+
+#controls-container > button:active {
+    background-color: lightgrey;
+}
+
+#controls-container > button > img {
+    all: unset;
+    pointer-events: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #song-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    #song-container > img {
+        margin: 0;
+        width: 50vh;
+    }
+
+    #controls-container > button:first-child {
+        margin: 0;
+    }
+    
+    #song-container, #controls-container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@keyframes slide {
+    from {
+        width: 0;
+    } to {
+        width: 100%;
+    }
+}
